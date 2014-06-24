@@ -1,9 +1,9 @@
 require_relative  'spec_helper'
 require_relative  'roman_number'
 
- describe RomanNumber, 'The new numbers game' do
+  describe RomanNumber, 'The new numbers game' do
 
-    describe '.next' do
+    describe '.next', :focus do
 
       it 'takes the number 1 and returns I' do
         expect(RomanNumber.next(1)).to eq "I"
@@ -45,6 +45,46 @@ require_relative  'roman_number'
         expect(RomanNumber.next(10)).to eq "X"
       end
 
+      it 'takes the number 11 and returns XI' do
+        expect(RomanNumber.next(11)).to eq "XI"
+      end
+
+      it 'takes the number 12 and returns XII' do
+        expect(RomanNumber.next(12)).to eq "XII"
+      end
+
+      it 'takes the number 13 and returns XIII' do
+        expect(RomanNumber.next(13)).to eq "XIII"
+      end
+
+      it 'takes the number 14 and returns XIV' do
+        expect(RomanNumber.next(14)).to eq "XIV"
+      end
+
+      it 'takes the number 15 and returns XV' do
+        expect(RomanNumber.next(15)).to eq "XV"
+      end
+
+      it 'takes the number 16 and returns XVI' do
+        expect(RomanNumber.next(16)).to eq "XVI"
+      end
+
+      it 'takes the number 17 and returns XVII' do
+        expect(RomanNumber.next(17)).to eq "XVII"
+      end
+
+      it 'takes the number 18 and returns XVIII' do
+        expect(RomanNumber.next(18)).to eq "XVIII"
+      end
+
+      it 'takes the number 19 and returns XIX' do
+        expect(RomanNumber.next(19)).to eq "XIX"
+      end
+
+      it 'takes the number 20 and returns XX' do
+        expect(RomanNumber.next(20)).to eq "XX"
+      end
+      
       it 'takes the number 50 and returns L' do
         expect(RomanNumber.next(50)).to eq "L"
       end
@@ -56,5 +96,6 @@ require_relative  'roman_number'
       it 'takes the number 1000 and returns M' do
         expect(RomanNumber.next(1000)).to eq "M"
       end
+
     end
  end
